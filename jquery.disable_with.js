@@ -23,4 +23,8 @@
     element.val(message);
   };
 
+  $(function() {
+    $.disableWith.initialize();
+  });
+
 }(this.jQuery));
