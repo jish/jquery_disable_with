@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamically disable</title>
+
+    <script src="../vendor/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../jquery.disable_with.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+      $(function() {
+        $('#one').click(function() {
+          $('#two').disableWith('disabled...')
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <p>Click on button one to disable button two.</p>
+    <input type="button" id="one" value="one">
+    <input type="button" id="two" value="two">
+
+  </body>
+</html>
