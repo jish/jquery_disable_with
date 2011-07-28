@@ -36,4 +36,21 @@ describe('jQuery.disableWith', function() {
     });
   });
 
+  describe('initialize', function() {
+    it('should set up a click handler for valid elements', function() {
+      var button = $('<input value="foo" data-disable-with="bar">');
+      $('body').append(button);
+      $.disableWith.initialize();
+
+      expect(button.prop('disabled')).toBeFalsy();
+      expect(button.val()).toEqual('foo');
+
+      button.click();
+      expect(button.prop('disabled')).toBeTruthy();
+      expect(button.val()).toEqual('bar');
+
+      button.remove();
+    });
+  });
+
 });
