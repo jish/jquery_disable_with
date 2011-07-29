@@ -27,6 +27,19 @@
     return element;
   };
 
+  $.fn.revert = function() {
+    var element = $(this);
+    var originalValue = element.data('original-value');
+
+    element.prop('disabled', false);
+
+    if (originalValue) {
+      element.val(originalValue);
+    }
+
+    return element;
+  };
+
   $(function() {
     $.disableWith.initialize();
   });
