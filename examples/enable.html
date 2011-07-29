@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Revert</title>
+    <title>Enable</title>
 
     <script src="../vendor/jquery.js" type="text/javascript" charset="utf-8"></script>
     <script src="../jquery.disable_with.js" type="text/javascript" charset="utf-8"></script>
 
     <script type="text/javascript" charset="utf-8">
       $(function() {
-        $('#revert').click(function() { $('#button').revert(); });
+        $('#enable').click(function() { $('#button').enable(); });
       })
     </script>
   </head>
@@ -18,8 +18,8 @@
     <p>Click this button to simulate submitting a form.</p>
     <input type="button" id="button" value="Click me!" data-disable-with="submitting...">
 
-    <p>Click this button to call <code>revert()</code> on the button above.</p>
-    <input type="button" id="revert" value="revert()">
+    <p>Click this button to call <code>enable()</code> on the button above.</p>
+    <input type="button" id="enable" value="enable()">
 
   </body>
 </html>

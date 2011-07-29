@@ -60,31 +60,31 @@ describe('fn.disableWith', function() {
   it('should store the original value', function() {
     var button = $('<input type="submit" value="foo">');
     button.disableWith('bar');
-    expect(button.data('original-value')).toEqual('foo');
+    expect(button.data('enable-with')).toEqual('foo');
   });
 });
 
-describe('fn.revert', function() {
+describe('fn.enable', function() {
   it('should enable the button', function() {
     var button = $('<input type="button" disabled="disabled">');
-    button.revert();
+    button.enable();
     expect(button.prop('disabled')).toBeFalsy();
   });
 
   it('should restore the original value', function() {
-    var button = $('<input type="button" data-original-value="foo">');
-    button.revert();
+    var button = $('<input type="button" data-enable-with="foo">');
+    button.enable();
     expect(button.val()).toEqual('foo');
   });
 
   it('should not break if there is no original value', function() {
     var button = $('<input type="button" value="foo">');
-    button.revert();
+    button.enable();
     expect(button.val()).toEqual('foo');
   });
 
   it('should be chainable', function() {
-    var button = $('<input type="button" data-original-value="foo">');
-    expect(button.revert().val()).toEqual('foo');
+    var button = $('<input type="button" data-enable-with="foo">');
+    expect(button.enable().val()).toEqual('foo');
   });
 });

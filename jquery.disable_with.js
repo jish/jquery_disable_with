@@ -20,21 +20,21 @@
   $.fn.disableWith = function(message) {
     var element = $(this);
 
-    element.data('original-value', element.val());
+    element.data('enable-with', element.val());
     element.prop('disabled', true);
     element.val(message);
 
     return element;
   };
 
-  $.fn.revert = function() {
+  $.fn.enable = function() {
     var element = $(this);
-    var originalValue = element.data('original-value');
+    var enableWith = element.data('enable-with');
 
     element.prop('disabled', false);
 
-    if (originalValue) {
-      element.val(originalValue);
+    if (enableWith) {
+      element.val(enableWith);
     }
 
     return element;
