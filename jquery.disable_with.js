@@ -19,6 +19,8 @@
 
   $.fn.disableWith = function(message) {
     var element = $(this);
+
+    element.data('original-value', element.val());
     element.prop('disabled', true);
     element.val(message);
 

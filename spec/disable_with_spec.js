@@ -56,4 +56,10 @@ describe('fn.disableWith', function() {
     var button = $('<input type="submit">');
     expect(button.disableWith('foo').val()).toEqual('foo');
   });
+
+  it('should store the original value', function() {
+    var button = $('<input type="submit" value="foo">');
+    button.disableWith('bar');
+    expect(button.data('original-value')).toEqual('foo');
+  });
 });
