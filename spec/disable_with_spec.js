@@ -51,4 +51,9 @@ describe('fn.disableWith', function() {
     button.disableWith('foo');
     expect(button.val()).toEqual('foo');
   });
+
+  it('should be chainable', function() {
+    var button = $('<input type="submit">');
+    expect(button.disableWith('foo').val()).toEqual('foo');
+  });
 });

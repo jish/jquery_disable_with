@@ -21,6 +21,8 @@
     var element = $(this);
     element.prop('disabled', true);
     element.val(message);
+
+    return element;
   };
 
   $(function() {
