@@ -12,4 +12,4 @@ Just add a `data-disable-with` attribute to your button.
 
 Or dynamically disable a jQuery object.
 
-    $('#button').disableWith('disabled');
+    $('#button').disableWith('submitting...');
